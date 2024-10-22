@@ -39,7 +39,7 @@ document.getElementById('includeNumbers').checked,
 document.getElementById('includeSpecialChars').checked
     };
     const length = 
-parseInt(document.getElementById('password-length').value);
+parseInt(document.getElementById('length').value);
 
     if (isNaN(length) || lengtj < 8 || length > 128) {
         alert('Password length must be between 8 and 128 characters.');
@@ -54,7 +54,7 @@ document.getElementById('passwordOutput').textContent = password;
 
 // BONUS: Implement the copy to clipboard functionality
 document.getElementById('copyBtn').addEventListener('click', () => {
-    const password = document.getElementById('password-output').textContent;
+    const password = document.getElementById('passwordOutput').textContent;
     
     if (password) {
        
