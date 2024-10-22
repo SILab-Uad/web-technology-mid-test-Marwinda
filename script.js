@@ -40,9 +40,16 @@ document.getElementById('includeSpecialChars').checked
     };
     const length = 
 parseInt(document.getElementById('password-length').value);
+
+    if (isNaN(length) || lengtj < 8 || length > 128) {
+        alert('Password length must be between 8 and 128 characters.');
+        return;
+    }
+
     const password = 
 generatePassword(length, options);
-    document.getElementById('passwordOutput').textContent = password;
+    
+document.getElementById('passwordOutput').textContent = password;
 });
 
 // BONUS: Implement the copy to clipboard functionality
@@ -50,10 +57,12 @@ document.getElementById('copyBtn').addEventListener('click', () => {
     const password = document.getElementById('password-output').textContent;
     
     if (password) {
-        navigator.clipboard.writeText(password).then(() => {
+       
+ navigator.clipboard.writeText(password).then(() => {
             alert('Password copied to clipboard!');
         }).catch(err => {
-            console.error('Failed to copy text: ', err);
+            
+console.error('Failed to copy text: ', err);
         });
     } else {
         alert('No password to copy!');

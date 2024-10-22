@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #e0e7ff; /* Background color */
+    margin: 0;
 }
 
 .container {
@@ -24,15 +25,32 @@ h1 {
     color: #4a4a4a; /* Header color */
 }
 
+h3 {
+    font-size: 1.2em;
+    margin-botton: 10px;
+    color: #333;
+}
 label {
     display: block;
     margin: 10px 0;
+    font-size: 1em;
+    color: #4a4a4a;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-botton: 20px;
+    border: 1px solid #ccc
+    border-radius: 5px;
+    font-size: 1em;
 }
 
 .button-container {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 20px;
 }
 
 button {
@@ -43,6 +61,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     flex: 1;
+    font-size: 1em;
 }
 
 button:hover {
@@ -55,5 +74,35 @@ button:hover {
     font-weight: bold;
     color: #333;
     word-break: break-all;
+    padding: 10px;
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="number"] {
+        font-size: 0.9em;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    #passwordOutput {
+        font-size: 1.2em;
+    }
 }
 /* Add more styles here as needed */
